@@ -24,6 +24,9 @@ namespace AED
             cbOrderMethods.Items.Add("Burbuja menor");
             cbOrderMethods.Items.Add("Burbuja mayor");
             cbOrderMethods.Items.Add("Burbuja por señal");
+            cbOrderMethods.Items.Add("Sacudida");
+            cbOrderMethods.Items.Add("Inserción directa");
+            cbOrderMethods.Items.Add("Inserción indirecta");
             cbOrderMethods.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
@@ -43,6 +46,9 @@ namespace AED
                 DirectInsert();
             else if (cbOrderMethods.SelectedIndex == 5)
                 Shell();
+
+            txtOrderResult.Text += "\n---Resultado final---\n";
+            Print();
         }
 
         private void BtnClean_Click(object sender, EventArgs e)
@@ -88,9 +94,12 @@ namespace AED
                 {
                     numbers[k + 1] = numbers[k];
                     k = k - 1;
+                    Print();
+                    movements++;
                 }
 
                 numbers[k + 1] = temp;
+                Print();
             }
         }
 
@@ -101,20 +110,23 @@ namespace AED
 
             while(inta > 0)
             {
-                inta /= 2;
+                inta = (int)(inta / 2);
                 hasChange = true;
                 while(hasChange)
                 {
                     hasChange = false;
-                    inta = 0;
-                    for(int i = 0; (inta + inta) <= (n - 1); i++)
+                    for(int i = 0; (i + inta) <= (n - 1); i++)
                     {
                         if (numbers[i] > numbers[i + inta])
                         {
                             InvertPosition(i, i + inta);
+                            Print();
+                            hasChange = true;
                         }
+                        comparisons++;
                     }
                 }
+                Print();
             }
 
         }
@@ -131,7 +143,10 @@ namespace AED
                     {
                         InvertPosition(i - 1, i);
                         k = i;
+                        
+                        Print();
                     }
+                    comparisons++;
                 }
                 left = k + 1;
                 for (int i = left; i <= right; i++)
@@ -140,7 +155,9 @@ namespace AED
                     {
                         InvertPosition(i - 1, i);
                         k = i;
+                        Print();
                     }
+                    comparisons++;
                 }
                 right = k - 1;
             }
@@ -149,6 +166,7 @@ namespace AED
         private void InvertPosition(int pos1, int pos2)
         {
             int temp;
+            movements++;
             temp = numbers[pos1];
             numbers[pos1] = numbers[pos2];
             numbers[pos2] = temp;
@@ -156,7 +174,9 @@ namespace AED
 
         private void SetNumbers()
         {
+            txtOrderResult.Clear();
             n = comparisons = movements = 0;
+
             foreach (int item in lbNumbers.Items)
             {
                 Array.Resize(ref numbers, n + 1);

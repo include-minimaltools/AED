@@ -140,7 +140,7 @@
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.txtInput);
             this.Name = "RA3";
-            this.Text = "RA3";
+            this.Text = "RA3 - RA 4";
             this.Load += new System.EventHandler(this.RA3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

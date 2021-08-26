@@ -45,6 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Date.cs" />
+    <Compile Include="RA5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RA5.Designer.cs">
+      <DependentUpon>RA5.cs</DependentUpon>
+    </Compile>
     <Compile Include="RA2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +66,10 @@
     <Compile Include="RA3.Designer.cs">
       <DependentUpon>RA3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Student.cs" />
+    <EmbeddedResource Include="RA5.resx">
+      <DependentUpon>RA5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RA2.resx">
       <DependentUpon>RA2.cs</DependentUpon>
     </EmbeddedResource>
