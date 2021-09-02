@@ -79,6 +79,26 @@
     <Compile Include="RA7.designer.cs">
       <DependentUpon>RA7.cs</DependentUpon>
     </Compile>
+    <Compile Include="RA8\FrmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RA8\FrmEmployee.Designer.cs">
+      <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RA8\FrmQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RA8\FrmQuery.Designer.cs">
+      <DependentUpon>FrmQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RA8\RA8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RA8\RA8.Designer.cs">
+      <DependentUpon>RA8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RA8\Models\University.cs" />
+    <Compile Include="RA8\Tools.cs" />
     <EmbeddedResource Include="RA5.resx">
       <DependentUpon>RA5.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +113,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RA3.resx">
       <DependentUpon>RA3.cs</DependentUpon>
@@ -102,6 +123,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RA7.resx">
       <DependentUpon>RA7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RA8\FrmEmployee.resx">
+      <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RA8\FrmQuery.resx">
+      <DependentUpon>FrmQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RA8\RA8.resx">
+      <DependentUpon>RA8.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -115,6 +145,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\powered-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quey.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

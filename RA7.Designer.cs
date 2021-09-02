@@ -158,7 +158,7 @@ namespace AED
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RA7";
-            this.Text = "RA6";
+            this.Text = "RA7";
             this.ResumeLayout(false);
             this.PerformLayout();
 
