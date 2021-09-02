@@ -16,7 +16,7 @@ namespace AED
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RA5());
+            Application.Run(new RA7());
         }
     }
 }
